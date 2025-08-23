@@ -34,7 +34,6 @@ export default function UsersPage() {
       if (activeFilter) query.append("active", activeFilter);
 
       const data = await apiRequest(`users?${query.toString()}`);
-      console.log("Fetched users:", data);
       setUsers(data.content);
 
     } catch (err) {
